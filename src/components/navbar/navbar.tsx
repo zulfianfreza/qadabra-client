@@ -18,7 +18,7 @@ export default function Navbar() {
       )}
     >
       <div className="flex items-center gap-8">
-        <Logo />
+        <Logo className={cn({ " text-white": scrollPosition == 0 })} />
         <NavbarMenu />
       </div>
       <div className="flex items-center flex-row-reverse gap-4">
