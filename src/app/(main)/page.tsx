@@ -1,8 +1,11 @@
 import Container from "@/components/container";
+import ExpertItem from "@/components/expert-item";
 import Hero from "@/components/hero";
+import { Button } from "@/components/ui/button";
 import { TECH_LIST } from "@/lib/constants/tech";
 import Image from "next/image";
 import { FiGrid } from "react-icons/fi";
+import { LuStar } from "react-icons/lu";
 
 export default function MainPage() {
   return (
@@ -42,6 +45,15 @@ export default function MainPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        <div className=" mt-8">
+          <h1 className=" text-xl font-semibold text-gray-800 underline decoration-2 underline-offset-8">
+            Explore
+          </h1>
+          <div className=" mt-4 grid grid-cols-2 gap-4">
+            <ExpertItem />
           </div>
         </div>
       </Container>
