@@ -1,5 +1,7 @@
 "use client";
 
+import { useScrollPosition } from "@/hooks/use-scroll-position";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface IMenu {
@@ -31,10 +33,14 @@ export default function NavbarMenu() {
 }
 
 function NavbarMenuItem({ menu }: { menu: IMenu }) {
+  const scrollPosition = useScrollPosition();
   return (
     <Link
       href="/"
-      className=" h-8 text-white text-sm font-medium flex justify-center items-center hover:underline decoration-2 underline-offset-8"
+      className={cn(
+        " h-8 text-white text-sm font-medium flex justify-center items-center hover:underline decoration-2 underline-offset-8",
+        { "text-gray-800 hover:text-violet-700": scrollPosition > 0 }
+      )}
     >
       {menu.title}
     </Link>

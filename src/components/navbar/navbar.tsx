@@ -4,12 +4,21 @@ import { LuSearch } from "react-icons/lu";
 import { Button } from "../ui/button";
 import NavbarMenu from "./navbar-menu";
 import NavbarMenuMobile from "./navbar-menu-mobile";
+import Logo from "../logo";
+import { cn } from "@/lib/utils";
+import { useScrollPosition } from "@/hooks/use-scroll-position";
 
 export default function Navbar() {
+  const scrollPosition = useScrollPosition();
   return (
-    <header className=" w-full p-5 px-5 md:px-8 fixed top-0 flex items-center justify-between z-50">
+    <header
+      className={cn(
+        " w-full p-5 px-5 md:px-8 fixed top-0 flex items-center justify-between z-50",
+        { "bg-white border-b shadow": scrollPosition > 0 }
+      )}
+    >
       <div className="flex items-center gap-8">
-        <h1 className=" text-white text-2xl font-semibold">Qadabra</h1>
+        <Logo />
         <NavbarMenu />
       </div>
       <div className="flex items-center flex-row-reverse gap-4">
@@ -22,11 +31,21 @@ export default function Navbar() {
           >
             Become an Expert
           </Button>
-          <Link href="/" className=" text-white text-sm font-medium">
+          <Link
+            href="/"
+            className={cn(" text-white text-sm font-medium", {
+              "text-gray-800": scrollPosition > 0,
+            })}
+          >
             Sign Up
           </Link>
           <div className=" h-4 border-l"></div>
-          <Link href="/" className=" text-white text-sm font-medium">
+          <Link
+            href="/"
+            className={cn(" text-white text-sm font-medium", {
+              "text-gray-800": scrollPosition > 0,
+            })}
+          >
             Sign In
           </Link>
         </div>
