@@ -1,8 +1,21 @@
 "use client";
 
-export default function Container({ children }: { children: React.ReactNode }) {
+import { cn } from "@/lib/utils";
+
+export default function Container({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="container mx-auto py-16 px-5 md:px-10 lg:px-24 xl:px-32">
+    <div
+      className={cn(
+        "container mx-auto px-5 md:px-10 lg:px-24 xl:px-32",
+        className
+      )}
+    >
       {children}
     </div>
   );

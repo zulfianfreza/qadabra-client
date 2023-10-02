@@ -9,7 +9,7 @@ export default function Hero() {
       <div className=" w-96 h-20 bg-violet-800/30 absolute bottom-0 right-0 z-0"></div>
       <div className=" w-28 h-48 bg-violet-800/30 absolute bottom-0 right-0 z-0"></div>
       <div className=" w-48 h-36 bg-violet-800/30 absolute bottom-0 right-0 z-0"></div>
-      <Container>
+      <Container className="py-16">
         <div className="flex flex-col">
           <h1
             className=" text-white font-semibold text-4xl z-10"

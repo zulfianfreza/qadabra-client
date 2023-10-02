@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
+import { LuSearch } from "react-icons/lu";
 import { Button } from "../ui/button";
 import NavbarMenu from "./navbar-menu";
-import { LuAlignRight, LuSearch, LuSparkles } from "react-icons/lu";
 import NavbarMenuMobile from "./navbar-menu-mobile";
 
 export default function Navbar() {
