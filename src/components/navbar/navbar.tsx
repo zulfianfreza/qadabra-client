@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import NavbarMenu from "./navbar-menu";
 import { LuAlignRight, LuSearch, LuSparkles } from "react-icons/lu";
+import NavbarMenuMobile from "./navbar-menu-mobile";
 
 export default function Navbar() {
   return (
@@ -12,9 +13,7 @@ export default function Navbar() {
         <NavbarMenu />
       </div>
       <div className="flex items-center flex-row-reverse gap-4">
-        <button className=" block sm:hidden">
-          <LuAlignRight size={20} className="text-white" />
-        </button>
+        <NavbarMenuMobile />
         <div className=" hidden sm:flex items-center flex-row-reverse gap-4">
           <Button
             className=" bg-yellow-300 shadow-[4px_4px_0_0_#000000] text-gray-800 font-medium hover:bg-yellow-300"
