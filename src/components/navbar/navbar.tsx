@@ -7,7 +7,7 @@ import NavbarMenuMobile from "./navbar-menu-mobile";
 
 export default function Navbar() {
   return (
-    <header className=" w-full p-5 px-8 flex items-center bg-violet-700 justify-between">
+    <header className=" w-full p-5 px-5 md:px-8 fixed top-0 flex items-center justify-between z-50">
       <div className="flex items-center gap-8">
         <h1 className=" text-white text-2xl font-semibold">Qadabra</h1>
         <NavbarMenu />
